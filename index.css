@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+    
+}
+
+.header {
+    width: 90%;
+    margin: 0 auto;
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.header-left, .header-right {
+    font-family: "waters-titling-pro", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: "brioso-pro", serif;
+    font-weight: 500;
+    font-style: italic;
+    color: navy;
+}
+
+footer {
+    text-align: center;
+}
+
+header, 
+section, 
+footer {
+    padding: 1.25em 0;
+}
+
+
+main {
+    grid-area: main;
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "room"
+        "cats"
+        "floa"
+        "mary"
+        "ship";     
+}
+
+/* Media queries for to different screen sizes */
+
+@media(min-width: 500px) {
+    main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "room room"
+            "cats floa"
+            "mary floa"
+            "ship ship"
+    } 
+}
+   
+@media(min-width: 870px){
+    main {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-columns: repeat(9, 1fr) repeat(3, minmax(70px, 1fr));
+        grid-template-areas: 
+            "room room room room room room mary mary mary floa floa floa"
+            "cats cats cats ship ship ship ship ship ship floa floa floa"
+    }
+
+    header,
+    section,
+    footer {
+        padding: 2.875em 0;        
+    }
+    
+    header .container {
+        display: flex;
+        align-items: center;
+    }
+    
+    header .container {
+        justify-content: space-between;
+        align-items: start;
+    }
+}
+
+.language-room {
+    grid-area: room;
+}
+    
+.quantum-cat {
+    grid-area: cats;
+}
+
+.floating-man {
+    grid-area: floa;
+}
+
+.marys-room { 
+    grid-area: mary;
+}
+
+.theseus-ship {
+    grid-area: ship;
+}
+
+/* Cards for each post*/
+   
+a:hover, a:focus {
+    filter: brightness(0.9);
+}
+
+
+article {
+    border-radius: 0.2em;
+    background-color: #e5e5e5;
+    height: 100%;
+}
+
+.article-header {
+    box-sizing: border-box;
+    padding: 1em;
+    width: 100%;
+}
+
+
+/* typography Homepage*/
+
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 0.88rem;
+    color: black;
+    margin: 0;
+    letter-spacing: 0.065em;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 1rem;
+    margin: .4em 0;
+    letter-spacing: 0.03em;
+    color: #111111;
+    font-weight: 500;
+}
+
+p {
+    font-size: 1rem;
+    margin: .4em 0;
+    letter-spacing: 0.03em;
+    color: #111111;
+    font-weight: 500;
+    line-height: 1.5rem;
+}
+
+/* Images */
+
+img {
+    width: 100%;
+    border-top-left-radius: .2em;
+    border-top-right-radius: .2em;
+}
+/* Styling for individual articles */ 
+
+.section-two-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 4.6px;
+}
+
+.recent-posting {
+    flex: 1 220px;
+}
+
+.recent-posts-headline {
+    font-size: 1.5em;
+    font-family: "map-roman-normal", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p, h3 {
+    color: black;
+    box-sizing: border-box;
+    padding: 1em;
+    width: 100%;
+}
+
+.about-section, .full-article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+.about-image, .individual-article-main-image {
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+    display: block;
+    padding-bottom: 20px;
+}
+
