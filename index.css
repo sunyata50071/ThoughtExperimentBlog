@@ -72,7 +72,7 @@ main {
         grid-template-columns: repeat(9, 1fr) repeat(3, minmax(70px, 1fr));
         grid-template-areas: 
             "room room room room room room mary mary mary floa floa floa"
-            "cats cats cats ship ship ship ship ship ship floa floa floa"
+            "cats cats cats ship ship ship ship ship ship ship ship ship"
     }
 
     header,
